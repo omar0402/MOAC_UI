@@ -12,10 +12,21 @@ html{
 body{
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000, #024470 74%);
-    display: flex;
 }
 
 /*-- INIT Identifiers -- */
+
+#addUser{
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+#editUser{
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
 
 #hamburgerMenu{
     color: white;
@@ -31,8 +42,5 @@ body{
     font-size: 50px;
 }
 
-#welcomeUser{
-    color: white;
-}
-
 /* -- INIT Classes -- */
+
