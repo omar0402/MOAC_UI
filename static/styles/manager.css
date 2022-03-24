@@ -36,3 +36,19 @@ body{
 }
 
 /* -- INIT Classes -- */
+
+.closeButton{
+    background: transparent;
+    border: 0px;
+    color: white;
+    font-size: 30px;
+}
+
+.modalFooterStyle{
+    background-color: #024470;
+}
+
+.modalHeaderStyle{
+    background-color: #024470;
+    color: white;
+}

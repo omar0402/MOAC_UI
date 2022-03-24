@@ -12,38 +12,52 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
 
     <header class="py-3 mb-3">
         <div class="container-fluid d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
 
-            <div class="dropdown">
-                <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i id="hamburgerMenu" class="fa-solid fa-bars"></i>
+          <div class="btn-group">
+            <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              <i id="hamburgerMenu" class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+              <li>
+                <a class="dropdown-item" href="manager.html" aria-current="page">
+                  <i class="fa-solid fa-house"></i> Menú principal
                 </a>
-                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink">
+              </li>
+              <li>
+                <a class="dropdown-item" href="userManagement.html">
+                  <i class="fa-solid fa-users"></i> Gestión de usuarios
+                </a>
+              </li>
+              <li>
+                <div class="btn-group dropend">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <i class="fa-solid fa-building"></i> Organizaciones y sucursales
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
                     <li>
-                        <a class="dropdown-item" href="manager.html" aria-current="page">
-                            Menú principal <i class="fa-solid fa-house"></i>
-                        </a>
+                      <a class="dropdown-item" href="organizationsManagement.html">
+                        <i class="fa-solid fa-building-circle-arrow-right"></i> Gestión de organizaciones
+                      </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="userManagement.html">
-                            Gestión de usuarios <i class="fa-solid fa-users"></i>
-                        </a>
+                      <a class="dropdown-item" href="branchsManagement.html">
+                        <i class="fa-solid fa-map-location-dot"></i> Sucursales
+                      </a>
                     </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Organizaciones y sucursales <i class="fa-solid fa-building"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="manualManagement.html">
-                            Gestión de manuales <i class="fa-solid fa-book"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="manualManagement.html">
+                  <i class="fa-solid fa-book"></i> Gestión de manuales
+                </a>
+              </li>
+            </ul>
+          </div>
 
             <div class="d-flex align-items-center">
                 <h1 id="mainTitle">Menú principal</h1>
@@ -52,7 +66,7 @@
             <div class="d-flex align-items-center">
                 
                 <div class="flex-shrink-0 dropdown">
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="d-block text-decoration-none" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                         <i id="userConfig" class="fa-solid fa-user-gear"></i>
                     </a>
                     
@@ -71,32 +85,33 @@
         <h1 id="welcomeUser">Bienvenido usuario.</h1>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header modalHeaderStyle">
               <h5 class="modal-title" id="exampleModalLabel">Cambio de contraseña</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button class="closeButton" type="button" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
             </div>
             <div class="modal-body">
               <form>
                 <div class="mb-3">
                   <label for="recipient-name" class="col-form-label">Nueva contraseña:</label>
-                  <input type="text" class="form-control" id="recipient-name">
+                  <input type="password" class="form-control" id="recipient-name" required>
                 </div>
                 <div class="mb-3">
                   <label for="message-text" class="col-form-label">Confirmar contraseña:</label>
-                  <input type="text" class="form-control" id="recipient-name">
+                  <input type="password" class="form-control" id="recipient-name" required>
                 </div>
               </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Actualizar</button>
+            <div class="modal-footer modalFooterStyle">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
   </div>
 

@@ -1,12 +1,10 @@
 /*-- INIT Selectors --*/
-
 *{
     margin: 0;
 	padding: 0;
 }
 
 /* -- INIT Tags -- */
-
 html{
     height: 100%;
 }
@@ -14,6 +12,7 @@ html{
 body{
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000, #024470 74%);
+    background-attachment: fixed;
 }
 
 /*-- INIT Identifiers -- */
