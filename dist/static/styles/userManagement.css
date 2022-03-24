@@ -1,10 +1,12 @@
 /*-- INIT Selectors --*/
+
 *{
     margin: 0;
 	padding: 0;
 }
 
 /* -- INIT Tags -- */
+
 html{
     height: 100%;
 }
@@ -12,6 +14,7 @@ html{
 body{
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000, #024470 74%);
+    background-attachment: fixed;
 }
 
 /*-- INIT Identifiers -- */
@@ -23,8 +26,8 @@ body{
 }
 
 #editUser{
-    font-size: 45px;
-    color: white;
+    font-size: 20px;
+    color: rgb(7, 22, 243);
     cursor: pointer;
 }
 
@@ -44,3 +47,35 @@ body{
 
 /* -- INIT Classes -- */
 
+.closeButton{
+    background: transparent;
+    border: 0px;
+    color: white;
+    font-size: 30px;
+}
+
+.modalFooterStyle{
+    background-color: #024470;
+}
+
+.modalHeaderStyle{
+    background-color: #024470;
+    color: white;
+}
+
+.paginationStyles{
+    margin-top: 150px;
+}
+
+.reports{
+    width: 92% !important;
+    text-align: center;
+}
+/*.reports i{
+    width: 92% !important;
+    text-align: center;
+}*/
+
+.searchBar{
+    width: 92%;
+}
