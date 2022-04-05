@@ -21,6 +21,7 @@
                 <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                   <i id="hamburgerMenu" class="fa-solid fa-bars"></i>
                 </button>
+                
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
                   <li>
                     <a class="dropdown-item" href="manager.html" aria-current="page">
@@ -33,6 +34,7 @@
                     </a>
                   </li>
                   <li>
+
                     <div class="btn-group dropend">
                       <button class="btn dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                         <i class="fa-solid fa-building"></i> Organizaciones y sucursales
@@ -50,6 +52,7 @@
                         </li>
                       </ul>
                     </div>
+                    
                   </li>
                   <li>
                     <a class="dropdown-item" href="manualManagement.html">
@@ -57,6 +60,7 @@
                     </a>
                   </li>
                 </ul>
+
               </div>
                <!-- <div class="dropdown  dropdown-toggle">
                     <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 text-decoration-none" id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,7 +126,7 @@
                         </a>
                         
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Cambiar contraseña</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changePasswordModal" data-bs-whatever="@mdo">Cambiar contraseña</a></li>
                             <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
                         </ul>
                     </div>
@@ -133,13 +137,20 @@
         </header>
 
         <div class="d-flex align-items-center justify-content-center mt-5">
-          <i id="addUser" class="fa-solid fa-user-plus" data-bs-toggle="modal" data-bs-target="#addUserModal" data-bs-whatever="@mdoUser"></i>
+          <button style="background: transparent; border:none;" title="Agregar" data-bs-toggle="modal" data-bs-target="#addUserModal" data-bs-whatever="@mdoUser">
+            <i id="addUser" class="fa-solid fa-user-plus"></i>
+          </button>
         </div>
 
-        <div class="d-flex align-items-center justify-content-center mt-5">
+        <!-- <div class="d-flex align-items-center justify-content-center mt-5">
             <form class="me-3 searchBar">
               <input type="search" class="form-control" placeholder="Buscar usuarios..." aria-label="Search">
             </form>
+        </div> -->
+
+        <div class="input-group d-flex align-items-center justify-content-center mt-5">
+          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="text" class="form-control" placeholder="Buscar usuario..." aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
         <!--<div class="d-flex align-items-center justify-content-center mt-5">
@@ -151,32 +162,32 @@
 
         <div class="d-flex align-items-center justify-content-center mt-5">
 
-          <table class="table table-primary table-striped table-hover reports">
+          <table class="table table-hover reports">
             <thead>
               <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Nombre de usuario</th>
                 <th scope="col">Estado</th>
-                <th scope="col">Editar</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">Omar Olivera Díaz</th>
                 <td>olivera.omar</td>
-                <td class="table-success">Activo</td>
+                <td>Activo</td>
                 <td><i id="editUser" class="fa-solid fa-user-pen" data-bs-toggle="modal" data-bs-target="#editUserModal" data-bs-whatever="@mdoUser"></i></td>
               </tr>
               <tr>
                 <th scope="row">Gabriel Solís Cámara Gaytán</th>
                 <td>solis.gabriel</td>
-                <td class="table-success">Activo</td>
-                <td><i id="editUser" class="fa-solid fa-user-pen" data-bs-toggle="modal" data-bs-target="#editUserModal" data-bs-whatever="@mdoUser"></i></td>
+                <td>Activo</td>
+                <td><button style="background: transparent; border:none;" title="Editar" data-bs-toggle="modal" data-bs-target="#editUserModal" data-bs-whatever="@mdoUser"><i id="editUser" class="fa-solid fa-user-pen"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">Fernando Solís Cámara Gaytán</th>
                 <td>solis.fernando</td>
-                <td class="table-success">Activo</td>
+                <td>Activo</td>
                 <td><i id="editUser" class="fa-solid fa-user-pen" data-bs-toggle="modal" data-bs-target="#editUserModal" data-bs-whatever="@mdoUser"></i></td>
               </tr>
             </tbody>
@@ -184,7 +195,9 @@
 
         </div>
 
-        <div class="d-flex align-items-center justify-content-center paginationStyles">
+        <!--PAGINATION-->
+
+        <div class="d-flex align-items-center justify-content-center mt-4">
           <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item">
@@ -203,12 +216,16 @@
             </ul>
           </nav>
         </div>
+
+        <!--END PAGINATION-->
+
+        <!--PASSWORD CHANGE MODAL-->
     
-        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="changePasswordModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header modalHeaderStyle">
-                  <h5 class="modal-title" id="exampleModalLabel">Cambio de contraseña</h5>
+                  <h5 class="modal-title" id="changePasswordModalLabel">Cambio de contraseña</h5>
                   <button class="closeButton" type="button" data-bs-dismiss="modal" aria-label="Close">
                     <i class="fa-solid fa-xmark"></i>
                   </button>
@@ -226,11 +243,36 @@
                   </form>
                 </div>
                 <div class="modal-footer modalFooterStyle">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+                  <button type="button" class="btn btn-success" data-bs-target="#confirmPasswordChangeModal" data-bs-toggle="modal">Actualizar</button>
                 </div>
               </div>
             </div>
         </div>
+
+        <!--END PASSWORD CHANGE MODAL-->
+
+        <!--CONFIRM PASSWORD CHANGE MODAL-->
+
+        <div class="modal fade" id="confirmPasswordChangeModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="confirmPasswordChangeModalLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header modalHeaderStyle">
+                <h5 class="modal-title" id="confirmPasswordChangeModalLabel">Confirmación</h5>
+              </div>
+              <div class="modalHeaderStyle modal-body d-flex justify-content-center">
+                ¿Está seguro?
+              </div>
+              <div class="modal-footer modalFooterStyle">
+                <button class="btn btn-danger" data-bs-target="#changePasswordModal" data-bs-toggle="modal">Cancelar</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--END PASSWORD CHANGE MODAL-->
+
+        <!--ADD USER MODAL-->
 
         <div class="modal fade" id="addUserModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="addUserModal" aria-hidden="true">
             <div class="modal-dialog">
@@ -270,12 +312,36 @@
                   </form>
                 </div>
                 <div class="modal-footer modalFooterStyle">
-                  <button type="button" class="btn btn-success btn btn-primary">Guardar</button>
+                  <button type="button" class="btn btn-success" data-bs-target="#confirmAddUserModal" data-bs-toggle="modal">Guardar</button>
                 </div>
               </div>
             </div>
         </div>
 
+        <!--END ADD USER MODAL-->
+
+        <!--CONFIRM ADD USER MODAL-->
+
+        <div class="modal fade" id="confirmAddUserModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="confirmAddUserModalLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header modalHeaderStyle">
+                <h5 class="modal-title" id="confirmAddUserModalLabel">Confirmación</h5>
+              </div>
+              <div class="modal-body d-flex justify-content-center">
+                ¿Está seguro?
+              </div>
+              <div class="modal-footer modalFooterStyle">
+                <button class="btn btn-secondary" data-bs-target="#addUserModal" data-bs-toggle="modal">Cancelar</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--END CONFIRM ADD USER MODAL-->
+
+        <!--EDIT USER MODAL-->
 
         <div class="modal fade" id="editUserModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editUserModal" aria-hidden="true">
             <div class="modal-dialog">
@@ -318,23 +384,42 @@
                       <input type="text" class="form-control" id="recipient-name">
                     </div>
 
-                    <div class="d-flex-wrap justify-content-center align-items-center">
-                      <h4 style="text-align: center;">Activo:</h4>
-                      <div class="form-check form-switch d-flex justify-content-center align-items-center">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <div class="d-flex ">
+                      <div class="form-check form-switch d-flex ">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked> &nbsp; Activo
                       </div>
                     </div>
 
                   </form>
                 </div>
                 <div class="modal-footer modalFooterStyle">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+                  <button type="button" class="btn btn-success" data-bs-target="#confirmEditUserModal" data-bs-toggle="modal">Actualizar</button>
                 </div>
               </div>
             </div>
         </div>
     
       </div>
+
+      <!--END EDIT USER MODAL-->
     
+      <!--CONFRIM EDIT USER MODAL-->
+      <div class="modal fade" id="confirmEditUserModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="confirmEditUserModalLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header modalHeaderStyle">
+              <h5 class="modal-title" id="confirmEditUserModalLabel">Confirmación</h5>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+              ¿Está seguro?
+            </div>
+            <div class="modal-footer modalFooterStyle">
+              <button class="btn btn-secondary" data-bs-target="#editUserModal" data-bs-toggle="modal">Cancelar</button>
+              <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END CONFIRM EDIT USER MODAL-->
 </body>
 </html>

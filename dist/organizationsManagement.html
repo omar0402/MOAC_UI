@@ -12,104 +12,323 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-        <header class="py-3 mb-3">
-            <div class="container-fluid d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
+    <header class="py-3 mb-3">
+        <div class="container-fluid d-flex gap-3 align-items-center justify-content-between" style="grid-template-columns: 1fr 2fr;">
 
-              <div class="btn-group">
-                <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                  <i id="hamburgerMenu" class="fa-solid fa-bars"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-                  <li>
-                    <a class="dropdown-item" href="manager.html" aria-current="page">
-                      <i class="fa-solid fa-house"></i> Menú principal
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="userManagement.html">
-                      <i class="fa-solid fa-users"></i> Gestión de usuarios
-                    </a>
-                  </li>
-                  <li>
-                    <div class="btn-group dropend">
-                      <button class="btn dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                        <i class="fa-solid fa-building"></i> Organizaciones y sucursales
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-                        <li>
-                          <a class="dropdown-item" href="organizationsManagement.html">
-                            <i class="fa-solid fa-building-circle-arrow-right"></i> Gestión de organizaciones
-                          </a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="branchsManagement.html">
-                            <i class="fa-solid fa-map-location-dot"></i> Sucursales
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="manualManagement.html">
-                      <i class="fa-solid fa-book"></i> Gestión de manuales
-                    </a>
-                  </li>
-                </ul>
-              </div>
-    
-                <div class="d-flex align-items-center">
-                    <h1 id="mainTitle">Gestión de organizaciones</h1>
-                </div>
-                
-                <div class="d-flex align-items-center">
-                    
-                    <div class="flex-shrink-0 dropdown">
-                        <a href="#" class="d-block text-decoration-none" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i id="userConfig" class="fa-solid fa-user-gear"></i>
-                        </a>
-                        
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Cambiar contraseña</a></li>
-                            <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
-                        </ul>
-                    </div>
-    
-                </div>
-                
-            </div>
-        </header>
-    
-        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header modalHeaderStyle">
-                  <h5 class="modal-title" id="exampleModalLabel">Cambio de contraseña</h5>
-                  <button class="closeButton" type="button" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
+          <div class="btn-group">
+            <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              <i id="hamburgerMenu" class="fa-solid fa-bars"></i>
+            </button>
+            
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+              <li>
+                <a class="dropdown-item" href="manager.html" aria-current="page">
+                  <i class="fa-solid fa-house"></i> Menú principal
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="userManagement.html">
+                  <i class="fa-solid fa-users"></i> Gestión de usuarios
+                </a>
+              </li>
+              <li>
+
+                <div class="btn-group dropend">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <i class="fa-solid fa-building"></i> Organizaciones y sucursales
                   </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                    <li>
+                      <a class="dropdown-item" href="organizationsManagement.html">
+                        <i class="fa-solid fa-building-circle-arrow-right"></i> Gestión de organizaciones
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="branchsManagement.html">
+                        <i class="fa-solid fa-map-location-dot"></i> Sucursales
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="recipient-name" class="col-form-label">Nueva contraseña:</label>
-                      <input type="password" class="form-control" id="recipient-name" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="message-text" class="col-form-label">Confirmar contraseña:</label>
-                      <input type="password" class="form-control" id="recipient-name" required>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer modalFooterStyle">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
-                </div>
-              </div>
+                
+              </li>
+              <li>
+                <a class="dropdown-item" href="manualManagement.html">
+                  <i class="fa-solid fa-book"></i> Gestión de manuales
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
+            <div class="d-flex align-items-center">
+                <h1 id="mainTitle">Gestión de organizaciones</h1>
             </div>
+            
+            <div class="d-flex align-items-center">
+                
+                <div class="flex-shrink-0 dropdown">
+                    <a href="#" class="d-block text-decoration-none" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i id="userConfig" class="fa-solid fa-user-gear"></i>
+                    </a>
+                    
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changePasswordModal" data-bs-whatever="@mdo">Cambiar contraseña</a></li>
+                        <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
         </div>
-    
+    </header>
+
+    <div class="d-flex align-items-center justify-content-center mt-5">
+      <button style="background: transparent; border:none;" title="Agregar organización" data-bs-toggle="modal" data-bs-target="#addOrganizationModal" data-bs-whatever="@mdoUser">
+        <i id="addOrganization" class="fa-solid fa-building-circle-check"></i>
+      </button>
+    </div>
+
+    <div class="input-group d-flex align-items-center justify-content-center mt-5">
+      <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <input type="text" class="form-control" placeholder="Buscar organización..." aria-label="Organization" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center mt-5">
+
+      <table class="table table-hover reports">
+        <thead>
+          <tr>
+            <th scope="col">Razón social</th>
+            <th scope="col">Giro</th>
+            <th scope="col">RFC</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Grupo Covix S.A de C.V.</th>
+            <td>Comercio de equipo audiovisual</td>
+            <td>GCO030829FE8</td>
+            <td data-bs-toggle="modal" data-bs-target="#editOrganizationModal" data-bs-whatever="@mdoUser" title="Editar organización"><i id="editOrganization" class="fa-solid fa-building-circle-arrow-right" class="fa-solid fa-user-pen"></i></td>
+          </tr>
+          <tr>
+            <th scope="row">Olstor Servicies S.A. de C.V..</th>
+            <td>Almacenamiento de combustible</td>
+            <td>OSE160912U73</td>
+            <td data-bs-toggle="modal" data-bs-target="#editOrganizationModal" data-bs-whatever="@mdoUser" title="Editar organización"><i id="editOrganization" class="fa-solid fa-building-circle-arrow-right" class="fa-solid fa-user-pen"></i></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <!--PAGINATION-->
+
+    <div class="d-flex align-items-center justify-content-center mt-4">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--END PAGINATION-->
+
+    <!--PASSWORD CHANGE MODAL-->
+
+    <div class="modal fade" id="changePasswordModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modalHeaderStyle">
+              <h5 class="modal-title" id="changePasswordModalLabel">Cambio de contraseña</h5>
+              <button class="closeButton" type="button" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Nueva contraseña:</label>
+                  <input type="password" class="form-control" id="recipient-name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Confirmar contraseña:</label>
+                  <input type="password" class="form-control" id="recipient-name" required>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer modalFooterStyle">
+              <button type="button" class="btn btn-success" data-bs-target="#confirmPasswordChangeModal" data-bs-toggle="modal">Actualizar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--END PASSWORD CHANGE MODAL-->
+
+    <!--CONFIRM PASSWORD CHANGE MODAL-->
+
+    <div class="modal fade" id="confirmPasswordChangeModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="confirmPasswordChangeModalLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modalHeaderStyle">
+            <h5 class="modal-title" id="confirmPasswordChangeModalLabel">Confirmación</h5>
+          </div>
+          <div class="modal-body d-flex justify-content-center">
+            ¿Está seguro?
+          </div>
+          <div class="modal-footer modalFooterStyle">
+            <button class="btn btn-secondary" data-bs-target="#changePasswordModal" data-bs-toggle="modal">Cancelar</button>
+            <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!--END PASSWORD CHANGE MODAL-->
+
+    <!--ADD ORGANIZATION MODAL-->
+
+    <div class="modal fade" id="addOrganizationModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="addOrganizationModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modalHeaderStyle">
+              <h5 class="modal-title" id="addOrganizationModalLabel">Agregar organización</h5>
+              <button class="closeButton" type="button" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Razón social:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Giro:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">RFC:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Domicilio:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer modalFooterStyle">
+              <button type="button" class="btn btn-success" data-bs-target="#confirmAddOrganizationModal" data-bs-toggle="modal">Guardar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!--END ADD ORGANIZATION MODAL-->
+
+    <!--CONFIRM ADD ORGANIZATION MODAL-->
+
+    <div class="modal fade" id="confirmAddOrganizationModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="confirmAddOrganizationModalLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modalHeaderStyle">
+            <h5 class="modal-title" id="confirmAddOrganizationModalLabel">Confirmación</h5>
+          </div>
+          <div class="modal-body d-flex justify-content-center">
+            ¿Está seguro?
+          </div>
+          <div class="modal-footer modalFooterStyle">
+            <button class="btn btn-secondary" data-bs-target="#addOrganizationModal" data-bs-toggle="modal">Cancelar</button>
+            <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--END CONFIRM ADD ORGANIZATION MODAL-->
+
+    <!--EDIT ORGANIZATION MODAL-->
+
+    <div class="modal fade" id="editOrganizationModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editOrganizationModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modalHeaderStyle">
+              <h5 class="modal-title" id="editOrganizationModalLabel">Editar organización</h5>
+              <button class="closeButton" type="button" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form>
+
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Razon social:</label>
+                    <input type="text" class="form-control" id="recipient-name" placeholder="Grupo Covix S.A de C.V.">
+                </div>
+
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Giro:</label>
+                    <input type="text" class="form-control" id="recipient-name" placeholder="Comercio de equipo audiovisual">
+                </div>
+
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Domicilio:</label>
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Av. Paseo del Pedregal 1313, Jardines del Pedregal">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">RFC:</label>
+                  <input type="text" class="form-control" id="recipient-name" placeholder="GCO030829FE8">
+                </div>
+
+              </form>
+
+            </div>
+            <div class="modal-footer modalFooterStyle">
+              <button type="button" class="btn btn-success" data-bs-target="#confirmEditOrganizationModal" data-bs-toggle="modal">Actualizar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+  <!--END EDIT ORGANIZATION MODAL-->
+
+  <!--CONFRIM EDIT ORGANIZATION MODAL-->
+  <div class="modal fade" id="confirmEditOrganizationModal" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="confirmEditOrganizationModalLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header modalHeaderStyle">
+          <h5 class="modal-title" id="confirmEditOrganizationrModalLabel">Confirmación</h5>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          ¿Está seguro?
+        </div>
+        <div class="modal-footer modalFooterStyle">
+          <button class="btn btn-secondary" data-bs-target="#editOrganizationModal" data-bs-toggle="modal">Cancelar</button>
+          <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END CONFIRM EDIT ORGANIZATION MODAL-->
     
 </body>
 </html>
