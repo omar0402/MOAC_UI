@@ -23,7 +23,7 @@ body{
     cursor: pointer;
 }
 
-#addManual{
+#createOrganizationalChart{
     font-size: 30px;
     color: white;
     cursor: pointer;
@@ -111,7 +111,7 @@ body{
 }
 
 .dropdownMenuOptions{
-    /*padding-right: 10px !important;*/
+    padding-right: 10px !important;
 }
 
 .dropdown-toggle{

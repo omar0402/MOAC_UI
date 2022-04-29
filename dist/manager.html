@@ -21,36 +21,71 @@
             <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
               <i id="hamburgerMenu" class="fa-solid fa-bars"></i>
             </button>
+            
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
               <li>
                 <a class="dropdown-item" href="manager.html" aria-current="page">
-                  <i class="fa-solid fa-house"></i> Menú principal
+
+                  <div class="dropdownMenu d-flex">
+                    <div class="dropdownMenuOptions d-flex flex-column" style="background-color: aqua; height: 24px !important;">
+                      <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="justify-content-center d-flex flex-column align-items-center justify-content-center" style="background-color: green; height: 24px !important;">
+                      <p style="text-align: center !important;">Menú principal</p>
+                    </div>
+                  </div>
+                  
                 </a>
               </li>
+
               <li>
+
                 <a class="dropdown-item" href="userManagement.html">
-                  <i class="fa-solid fa-users"></i> Gestión de usuarios
+                  <div class="dropdownMenu">
+                    <div style="padding-right: 8px;">
+                      <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                      <p>Gestión de usuarios</p>
+                    </div>
+                  </div>
+
                 </a>
               </li>
+
               <li>
-                <div class="btn-group dropend">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    <i class="fa-solid fa-building"></i> Organizaciones y sucursales
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-                    <li>
-                      <a class="dropdown-item" href="organizationsManagement.html">
-                        <i class="fa-solid fa-building-circle-arrow-right"></i> Gestión de organizaciones
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="branchsManagement.html">
-                        <i class="fa-solid fa-map-location-dot"></i> Sucursales
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+
+                <a class="dropdown-item" href="organizationsManagement.html">
+                  <div class="dropdownMenu">
+                    <div class="dropdownMenuOptions">
+                      <i class="fa-solid fa-city"></i>
+                      
+                    </div>
+                    <div>
+                      <p>Organizaciones</p>
+                    </div>
+                  </div>
+
+                </a>
+
               </li>
+
+              <li>
+
+                <a class="dropdown-item" href="branchsManagement.html">
+                  <div class="dropdownMenu">
+                    <div class="dropdownMenuOptions">
+                      <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div>
+                      <p>Sucursales</p>
+                    </div>
+                  </div>
+
+                </a>
+
+              </li>
+
               <li>
                 <a class="dropdown-item" href="manualManagement.html">
                   <i class="fa-solid fa-book"></i> Gestión de manuales
