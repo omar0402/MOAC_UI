@@ -1,12 +1,10 @@
 /*-- INIT Selectors --*/
-
 *{
     margin: 0;
 	padding: 0;
 }
 
 /* -- INIT Tags -- */
-
 html{
     height: 100%;
 }
@@ -14,13 +12,60 @@ html{
 body{
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000, #024470 74%);
-    background-attachment: fixed;
+    display: flex;
 }
 
 /*-- INIT Identifiers -- */
 
+#addBranch{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#createOrganizationalChart{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#addOrganization{
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 #addUser{
-    font-size: 45px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#addUsers{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#deleteUser{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#editBranch{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#editManual{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#editOrganization{
+    font-size: 20px;
     color: white;
     cursor: pointer;
 }
@@ -45,6 +90,10 @@ body{
     font-size: 50px;
 }
 
+#welcomeUser{
+    color: white;
+}
+
 /* -- INIT Classes -- */
 
 .closeButton{
@@ -52,6 +101,22 @@ body{
     border: 0px;
     color: white;
     font-size: 30px;
+}
+
+.dropdownMenu{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    height: 25px !important; 
+}
+
+.dropdownMenuOptions{
+    padding-right: 10px !important;
+}
+
+.dropdown-toggle{
+    margin-left: 5px !important;
+    height: 25px !important; 
 }
 
 .input-group-text {
@@ -65,21 +130,28 @@ body{
     color: #ffffff !important;
     text-align: center;
     white-space: nowrap;
+    background-color: #245271 !important;
     /* background-color: #e9ecef;
     border: 1px solid #ced4da; */
-    background-color: #245271 !important;
     border: 1px solid #245271 !important;
     border-radius: 0.25rem;
 }
 
+.modalbodyStyle{
+    background-color: #024470;
+    color: white;
+    font-weight: bold;
+}
+
 .modalFooterStyle{
     background-color: #024470;
+    border: transparent !important;
 }
 
 .modalHeaderStyle{
     background-color: #024470;
     color: white;
-    border: transparent;
+    border: transparent !important;
 }
 
 /*.paginationStyles{
@@ -94,6 +166,7 @@ body{
 
 .page-link {
     color: #027008 !important;
+    /*color: #024470 !important;*/
     text-decoration: none;
     background-color: #fff;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;

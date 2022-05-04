@@ -17,6 +17,65 @@ body{
 
 /*-- INIT Identifiers -- */
 
+#addBranch{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#addManual{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#addOrganization{
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#addUser{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#addUsers{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#deleteUser{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#editBranch{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#editManual{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#editOrganization{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#editUser{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
 #hamburgerMenu{
     color: white;
     font-size: 50px;
@@ -44,11 +103,199 @@ body{
     font-size: 30px;
 }
 
+.dropdownMenu{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    height: 25px !important; 
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    display: block;
+    width: auto;
+    margin: 4rem auto;
+  }
+  
+  .dropdown-menu-macos {
+    display: grid;
+    gap: .25rem;
+    padding: .5rem;
+    border-radius: .5rem;
+  }
+  .dropdown-menu-macos .dropdown-item {
+    border-radius: .25rem;
+  }
+  
+  .dropdown-item-danger {
+    color: var(--bs-red);
+  }
+  .dropdown-item-danger:hover,
+  .dropdown-item-danger:focus {
+    color: #fff;
+    background-color: var(--bs-red);
+  }
+  .dropdown-item-danger.active {
+    background-color: var(--bs-red);
+  }
+  
+  .btn-hover-light {
+    text-align: left;
+    background-color: var(--bs-white);
+    border-radius: .25rem;
+  }
+  .btn-hover-light:hover,
+  .btn-hover-light:focus {
+    color: var(--bs-blue);
+    background-color: var(--bs-light);
+  }
+  
+  .cal-month,
+  .cal-days,
+  .cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+  }
+  .cal-month-name {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    text-align: center;
+  }
+  .cal-weekday,
+  .cal-btn {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding: 0;
+  }
+  .cal-btn:not([disabled]) {
+    font-weight: 500;
+  }
+  .cal-btn:hover,
+  .cal-btn:focus {
+    background-color: rgba(0, 0, 0, .05);
+  }
+  .cal-btn[disabled] {
+    opacity: .5;
+  }
+  
+  .form-control-dark {
+    background-color: rgba(255, 255, 255, .05);
+    border-color: rgba(255, 255, 255, .15);
+  }
+  
+
+.dropdown-toggle{
+    margin-left: 5px !important;
+    height: 25px !important; 
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 5.5px 8px !important;
+    font-size: 25px !important;
+    font-weight: 400;
+    line-height: 1.5;
+    /* color: #212529 !important; */
+    color: #ffffff !important;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #245271 !important;
+    /* background-color: #e9ecef;
+    border: 1px solid #ced4da; */
+    border: 1px solid #245271 !important;
+    border-radius: 0.25rem;
+}
+
+.modalbodyStyle{
+    background-color: #024470;
+    color: white;
+    font-weight: bold;
+}
+
 .modalFooterStyle{
     background-color: #024470;
+    border: transparent !important;
 }
 
 .modalHeaderStyle{
     background-color: #024470;
     color: white;
+    border: transparent !important;
+}
+
+/*.paginationStyles{
+    margin-top: 100px;
+}*/
+
+.page-item.active .page-link {
+    color: #fff !important;
+    background-color: #012842 !important;
+    border-color: #012842 !important;
+}
+
+.page-link {
+    color: #027008 !important;
+    /*color: #024470 !important;*/
+    text-decoration: none;
+    background-color: #fff;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.table{
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #ffffff !important;
+    --bs-table-striped-bg: rgba(4, 255, 0, 0.05) !important;
+    --bs-table-active-color: #ffffff !important;
+    --bs-table-active-bg: rgba(4, 255, 0, 0.1) !important;
+    --bs-table-hover-color: #ffffff !important;
+    --bs-table-hover-bg: rgba(4, 255, 0, 0.075) !important;
+    color: #ffffff !important;
+}
+
+.table tr:nth-child(even){
+    background-color: #245271 !important;
+    color: white;
+}
+
+.table tr:nth-child(odd){
+    background-color: transparent !important;
+    color: white;
+}
+
+.table thead tr th{
+    border-bottom: 1.5pt solid white;
+    background-color: #012842;
+    text-align: center;
+}
+
+.reports{
+    width: 92% !important;
+    text-align: center;
+}
+.reports i{
+    width: 92% !important;
+    text-align: center;
+}
+
+.searchBar{
+    width: 92% !important;
 }
