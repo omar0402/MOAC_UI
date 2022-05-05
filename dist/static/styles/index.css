@@ -27,6 +27,15 @@ body{
 
 /*-- INIT Id's --*/
 
+#inputPassword2{
+    height: 20px;
+}
+
+#lock{
+    font-size: 20px;
+    color: #fff;
+}
+
 #loginButton{
     height: 30px;
     width: 100px;
@@ -65,17 +74,15 @@ body{
     border-radius: 75px;
 }
 
-#userName{
-    height: 20px;
-    border-radius: 5px;
-    border: #fff;
+#user{
+    font-size: 20px;
+    color: #fff;
 }
 
-#password{
+#userName{
     height: 20px;
-    border-radius: 5px;
-    border: #fff;
 }
+
 /* -- INIT Classes -- */
 .loginContainer div{
     box-sizing: border-box;
